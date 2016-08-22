@@ -7,7 +7,8 @@ export default Ember.Component.extend({
         title: this.get('title') ? this.get('title') : "",
         text: this.get('text') ? this.get('text') : "",
         image: this.get('image') ? this.get('image') : "",
-        category: this.get('category')
+        category: this.get('category'),
+        createdAt: new Date()
       };
       this.sendAction('saveListing', params);
     }

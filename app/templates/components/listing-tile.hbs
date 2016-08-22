@@ -2,5 +2,8 @@
   {{#link-to 'listing' listing.id}}
     <img src={{listing.image}} alt="{{listing.title}}">
     <h3>{{listing.title}}</h3>
+    <p>
+      {{listing.createdAt}}
+    </p>
   {{/link-to}}
 </div>
