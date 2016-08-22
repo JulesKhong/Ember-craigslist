@@ -1,1 +1,9 @@
-{{new-listing-form category=model saveListing="saveListing"}}
+<div class="col-sm-2">
+  <h2>{{model.name}}</h2>
+  {{new-listing-form category=model saveListing="saveListing"}}
+</div>
+<div class="col-sm-10">
+  {{#each model.listings as |listing| }}
+    {{listing-tile listing=listing}}
+  {{/each}}
+</div>
