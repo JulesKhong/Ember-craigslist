@@ -1,4 +1,6 @@
 <div class="col-sm-3">
-  <img src={{listing.image}} alt="{{listing.title}}">
-  <h3>{{listing.title}}</h3>
+  {{#link-to 'listing' listing.id}}
+    <img src={{listing.image}} alt="{{listing.title}}">
+    <h3>{{listing.title}}</h3>
+  {{/link-to}}
 </div>
