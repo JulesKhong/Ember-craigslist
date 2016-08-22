@@ -1,9 +1,13 @@
-<div class="col-sm-3">
-  {{#link-to 'listing' listing.id}}
-    <img src={{listing.image}} alt="{{listing.title}}">
-    <p>{{listing.title}}</p>
-    <p>
-      {{formatDate}}
-    </p>
-  {{/link-to}}
-</div>
+{{#each model.listings as |listing| }}
+  <div class="col-sm-3">
+    {{#link-to 'listing' listing.id}}
+      <img src={{listing.image}} alt="{{listing.title}}">
+      <p>{{listing.title}}</p>
+      <p>{{listing.price}}</p>
+      <p>
+        {{formatDate}}
+        {{listing.createdAt}}
+      </p>
+    {{/link-to}}
+  </div>
+{{/each}}

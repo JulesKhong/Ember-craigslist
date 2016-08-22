@@ -12,6 +12,7 @@ export default Ember.Component.extend({
         text: this.get('text') ? this.get('text') : "",
         image: this.get('image') ? this.get('image') : "",
         category: this.get('category'),
+        price: parseInt(this.get('price')),
         createdAt: new Date()
       };
       this.set('newListingForm', false);
