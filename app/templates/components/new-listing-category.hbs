@@ -1,0 +1,10 @@
+{{#if categoryShow}}
+  <h5>Create a new listing by selecting a category below</h5>
+  <ul>
+    {{#each categories as |category|}}
+      {{#link-to 'category' category.id}}<li>{{category.name}}</li>{{/link-to}}
+    {{/each}}
+  </ul>
+{{else}}
+  <button class="btn btn-default" {{action 'updateCategoryShow'}}>Create a listing</button>
+{{/if}}
